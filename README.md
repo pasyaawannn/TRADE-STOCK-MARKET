@@ -33,8 +33,8 @@ A full-stack, real-time stock market analytics platform built for the Indonesian
 ### 1. Clone & Setup
 
 ```bash
-git clone https://github.com/yourname/pasya-stock-market
-cd pasya-stock-market
+git clone https://github.com/pasyaawannn/TRADE-STOCK-MARKET
+cd TRADE-STOCK-MARKET
 cp .env.example .env
 ```
 
