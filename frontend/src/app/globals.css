@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-sans: 'Rajdhani', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: #04070f;
+  color: #e8f4ff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #070d1a; }
+::-webkit-scrollbar-thumb { background: #1e3550; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #2a4870; }
+
+/* Selection */
+::selection { background: rgba(0, 255, 157, 0.2); color: #e8f4ff; }
+
+@layer components {
+  .font-mono { font-family: var(--font-mono); }
+
+  /* Glassmorphism Panel */
+  .glass {
+    background: rgba(10, 18, 32, 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(30, 53, 80, 0.6);
+  }
+
+  /* Neon glow effects */
+  .glow-green { box-shadow: 0 0 20px rgba(0, 255, 157, 0.15); }
+  .glow-blue  { box-shadow: 0 0 20px rgba(0, 136, 255, 0.15); }
+  .glow-purple{ box-shadow: 0 0 20px rgba(124, 92, 252, 0.15); }
+
+  /* Neon text */
+  .text-glow-green { text-shadow: 0 0 12px rgba(0, 255, 157, 0.6); }
+  .text-glow-blue  { text-shadow: 0 0 12px rgba(0, 136, 255, 0.6); }
+
+  /* Section title */
+  .section-title {
+    @apply text-[10px] font-bold tracking-[1.5px] uppercase text-[#3a5270];
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #142035;
+  }
+
+  /* Live indicator dot */
+  .live-dot {
+    @apply w-1.5 h-1.5 rounded-full bg-green inline-block;
+    animation: pulseDot 1.5s ease-in-out infinite;
+  }
+
+  /* Stock change badges */
+  .badge-up {
+    @apply text-green bg-green/10 px-1.5 py-0.5 rounded text-xs font-bold;
+    font-family: var(--font-mono);
+  }
+  .badge-dn {
+    @apply text-red bg-red/10 px-1.5 py-0.5 rounded text-xs font-bold;
+    font-family: var(--font-mono);
+  }
+
+  /* Broker flow bar */
+  .flow-bar-buy  { @apply h-1.5 rounded-sm bg-green transition-all duration-500; }
+  .flow-bar-sell { @apply h-1.5 rounded-sm bg-red  transition-all duration-500; }
+
+  /* Table */
+  .trading-table {
+    @apply w-full border-collapse;
+  }
+  .trading-table th {
+    @apply text-[10px] font-bold text-[#3a5270] uppercase tracking-wider
+           text-left px-3 py-2 border-b border-[#142035];
+  }
+  .trading-table td {
+    @apply px-3 py-2 text-xs border-b border-[#142035];
+    font-family: var(--font-mono);
+  }
+  .trading-table tr:hover td { background: rgba(22, 36, 64, 0.5); }
+
+  /* Filter chip */
+  .filter-chip {
+    @apply px-3 py-1 border border-[#142035] rounded-full text-[11px] font-semibold
+           text-[#7a9bc4] cursor-pointer transition-all duration-150
+           hover:border-[#1e3550] hover:text-white;
+  }
+  .filter-chip.active {
+    @apply border-green text-green bg-green/10;
+  }
+
+  /* Button primary */
+  .btn-primary {
+    @apply bg-green text-void px-4 py-2 rounded font-bold text-sm
+           hover:opacity-85 transition-opacity cursor-pointer;
+    font-family: var(--font-sans);
+  }
+
+  /* Input field */
+  .trading-input {
+    @apply bg-elevated border border-[#142035] rounded text-white text-xs px-3 py-1.5
+           outline-none focus:border-green transition-colors;
+    font-family: var(--font-mono);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.85); }
+}
