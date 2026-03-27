@@ -47,7 +47,7 @@ certbot --nginx -d yourdomain.com
 Already configured. Works out of the box for `.JK` tickers.
 
 ### Option B: IDX Official API
-Register at https://www.idx.co.id/api
+Register at https://www.idx.co.id/api.
 ```
 IDX_API_KEY=your_key
 ```
