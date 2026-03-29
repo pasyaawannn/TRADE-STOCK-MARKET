@@ -27,7 +27,7 @@ A full-stack, real-time stock market analytics platform built for the Indonesian
 - Node.js 18+
 - Python 3.11+
 - Docker & Docker Compose
-- PostgreSQL 15.
+- PostgreSQL 15
 - Redis 7.
 
 ### 1. Clone & Setup
