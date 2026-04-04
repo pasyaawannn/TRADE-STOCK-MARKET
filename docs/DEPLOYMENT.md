@@ -1,4 +1,4 @@
-# Deployment Guide — Pasya Stock Market
+# Deployment Guide — Pasya Stock Market.
 
 ## Production Deployment
 
