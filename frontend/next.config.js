@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */..........12
+/** @type {import('next').NextConfig} */..........123
 const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
