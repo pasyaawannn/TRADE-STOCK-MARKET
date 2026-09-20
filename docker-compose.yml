@@ -1,4 +1,4 @@
-version: '3.9'1234
+version: '3.9'12345
 
 services:
   # ===== DATABASE =====
