@@ -1,4 +1,4 @@
-# 📈 Pasya Stock Market..
+# 📈 Pasya Stock Market...
 
 > **Professional Stock Analytics for the Next Generation Investor**
 
